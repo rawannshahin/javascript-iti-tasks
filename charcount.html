@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div>
+         <div style="margin-bottom: 50px;display:inline-block"> <label for="text" style="background-color: green;">Input:</label> <input  type="text"  id="inp" oninput="charcount()" style="border-color: green;" ></div>
+         <div style="margin-left: 50px;display:inline-block;"> <label for="text" style="background-color: green;">Letter:</label> <input  type="text" id="lett"  oninput="charcount()"  style="border-color: green;"> </div>
+         <div style="margin-bottom: 50px;"> <label for="text" style="background-color: blue;">output:</label> <input  type="text" id="out"   style="border-color: blue;" ></div> 
+         
+        </div>
+        <script >function charcount(){
+            const str = document.getElementById('inp').value;
+            const letter = document.getElementById('lett').value;
+            const outp=[];
+            for(var i=0;i<str.length; i++){
+                if(str[i].toLowerCase()==letter.toLowerCase()){
+                    outp.push(i);
+                }
+            } 
+            document.getElementById('out').value = outp.join(',');}</script>
+
+    </body>
+</html>
+
+
+

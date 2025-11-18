@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FizzBuzz Example</title>
+</head>
+<body>
+    <label for="text" style="background-color: green;">Input:</label> <input type="text" id="inp" oninput="checkFizzBuzz()">
+    <label for="text" style="background-color: blue; margin-left: 40px;">Output:</label> <input type="text" id="out" readonly >
+    
+    <script>
+        function checkFizzBuzz() {
+            var input = document.getElementById("inp").value;
+            var output = document.getElementById("out");
+
+            if (input % 3 == 0 && input % 5 == 0) {
+                output.setAttribute("value", "fizz buzz");
+            } else if (input % 5 == 0) {
+                output.setAttribute("value", "buzz");
+            } else if (input % 3 == 0) {
+                output.setAttribute("value", "fizz");
+            } else {
+                output.setAttribute("value", "no input founded");
+            }
+        }
+    </script>
+</body>
+</html>

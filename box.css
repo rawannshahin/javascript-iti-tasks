@@ -1,0 +1,19 @@
+.box {
+    width: 200px;
+    height: 50px;
+    background-color: #3498db;
+    border: 2px solid #35019d;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    text-align: center;
+    justify-content: center;
+    margin:200px;
+    display: flex;
+    align-items: center; 
+    border-radius: 30px;
+}
+
+.box:hover {
+    background-color:pink;
+    border-color: blue; 
+    box-shadow: 0 4px 8px  #35019d; 
+}

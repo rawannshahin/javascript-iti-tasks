@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register and Greeting</title>
+</head>
+<body>
+  
+    <div id="registration-section">
+        <h2>Register</h2>
+        <form id="registrationForm" onsubmit="register(); return false;">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" required><br><br>
+
+            <label for="age">Enter your age:</label>
+            <input type="number" id="age" required><br><br>
+
+            <label>Select your Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">
+                <img src="1.jpg" alt="Male" width="50">
+            </label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">
+                <img src="2.jpg" alt="Female" width="50">
+            </label><br><br>
+
+            <label for="color">Select your favorite color:</label>
+            <input type="color" id="color" required><br><br>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+
+    <div id="greeting-section" style="display:none;">
+        <img id="profile-pic" src="1.jpg" alt="Profile Picture" style="display:none;">
+        <div id="welcome-message"></div>
+    </div>
+
+    <script src="t2.js">
+        
+
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Auto Move Window Example</title>
+    </head>
+    <body>
+        <button onclick="stop()">Stop</button>
+        <script>
+            var newWindow = window.open("", "_blank", "width=200,height=200,top=100,left=100,scrollbars=yes,resizable=yes");
+            var intervalId; 
+            var moving = true; 
+
+            function moveWindow() {
+                if (newWindow && moving) {
+                    newWindow.moveTo(newWindow.screenX + 10, newWindow.screenY + 10);
+                    newWindow.focus(); }
+            }
+
+            function startMoving() {
+                intervalId = setInterval(moveWindow, 90); 
+            }
+
+            function stop() {
+                moving = false; 
+                clearInterval(intervalId); 
+                newWindow.focus(); 
+            }
+
+            startMoving(); 
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+    

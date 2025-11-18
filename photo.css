@@ -1,0 +1,11 @@
+img {
+    width: 300px;
+    filter: blur(0px);
+    opacity: 1;
+    transition: filter 1.5s ease-in-out, opacity 1.5s ease-in-out; 
+}
+
+img:hover {
+    filter: blur(10px);
+    opacity: 0.3;
+}

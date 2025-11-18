@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Typewriter Effect in Popup</title>
+</head>
+<body>
+    <button onclick="showMessage()"> Message</button>
+
+    <script>
+        function showMessage() {
+            
+            var newWindow = window.open("", "_blank", "width=400,height=200,top=100,left=100,scrollbars=yes,resizable=yes");
+
+            
+            var message = "your message will be displayes few seconds and this will be terminated ";
+            var index = 0;
+
+           
+            newWindow.document.open();
+            newWindow.document.write("<html><head><title>Typewriter Effect</title></head><body><p id='message' style='font-family: Arial, sans-serif; font-size: 18px; color: #333;'></p></body></html>");
+            newWindow.document.close();
+
+            function type() {
+                if (index < message.length) {
+                    newWindow.document.getElementById('message').textContent += message.charAt(index);
+                    index++;
+                } else {
+                    clearInterval(intervalId);
+                }
+            }
+
+            var intervalId = setInterval(type, 100); 
+        }
+    </script>
+</body>
+</html>
+
+
+
